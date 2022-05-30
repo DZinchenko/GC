@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Authorization\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Services\Implementations\" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="Configurations\" />
+    <None Remove="Services\Repositories\" />
+    <None Remove="FluentValidation" />
+    <None Remove="Microsoft.AspNetCore.Cryptography.KeyDerivation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RequestHandlers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Services\Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.17.0" />
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GC.Data\GC.Data.csproj" />
+  </ItemGroup>
+</Project>
